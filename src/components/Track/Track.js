@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
+
+const renderAction = () => {
+	isRemoval ? <button>+</button> : <button>-</button>;
+};
 
 function Track() {
-  return (
-    <div className="Track">
-  <div className="Track-information">
-    {/* <h3><!-- track name will go here --></h3> */}
-    {/* <p><!-- track artist will go here--> | <!-- track album will go here --></p> */}
-  </div>
-  {/* <button class="Track-action"><!-- + or - will go here --></button> */}
-</div>
-  )
+	return (
+		<div className="Track">
+			<div className="Track-information">
+				{/* <h3><!-- track name will go here --></h3> */}
+				{/* <p><!-- track artist will go here--> | <!-- track album will go here --></p> */}
+			</div>
+			{/* <button class="Track-action"><!-- + or - will go here --></button> */}
+		</div>
+	);
 }
 
-export default Track
+export default Track;
