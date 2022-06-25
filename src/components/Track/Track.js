@@ -1,15 +1,21 @@
-import React from 'react'
+import React from "react";
 
-function Track() {
-  return (
-    <div className="Track">
-  <div className="Track-information">
-    {/* <h3><!-- track name will go here --></h3> */}
-    {/* <p><!-- track artist will go here--> | <!-- track album will go here --></p> */}
-  </div>
-  {/* <button class="Track-action"><!-- + or - will go here --></button> */}
-</div>
-  )
+function Track({ track }) {
+	const isRemoval = false;
+	const renderAction = () => {
+		isRemoval ? <button>-</button> : <button>+</button>;
+	};
+
+	return (
+		<div className="Track">
+			<div className="Track-information">
+				<h3>Track Name: {track.name}</h3>
+				<p>Artist: {track.artist}</p>
+				<p>Album: {track.album}</p>
+			</div>
+			{renderAction()}
+		</div>
+	);
 }
 
-export default Track
+export default Track;

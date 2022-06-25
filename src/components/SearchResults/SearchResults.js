@@ -1,11 +1,14 @@
 import React from "react";
 import TrackList from "../TrackList/TrackList";
 
-function SearchResults() {
+function SearchResults({ searchResults }) {
 	return (
 		<div className="SearchResults">
 			<h2>Results</h2>
-			{/* <!-- Add a TrackList component --> */}
+			{/* {searchResults.map((track) => (
+				<TrackList key={track.id} track={track} />
+			))} */}
+			<TrackList tracks={searchResults} />
 		</div>
 	);
 }
