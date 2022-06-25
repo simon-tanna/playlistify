@@ -1,17 +1,19 @@
 import React from "react";
 
-// const renderAction = () => {
-// 	isRemoval ? <button>-</button> : <button>+</button>;
-// };
+function Track({ track }) {
+	const isRemoval = false;
+	const renderAction = () => {
+		isRemoval ? <button>-</button> : <button>+</button>;
+	};
 
-function Track() {
 	return (
 		<div className="Track">
 			<div className="Track-information">
-				{/* <h3><!-- track name will go here --></h3> */}
-				{/* <p><!-- track artist will go here--> | <!-- track album will go here --></p> */}
+				<h3>Track Name: {track.name}</h3>
+				<p>Artist: {track.artist}</p>
+				<p>Album: {track.album}</p>
 			</div>
-			{/* <button class="Track-action"><!-- + or - will go here --></button> */}
+			{renderAction()}
 		</div>
 	);
 }

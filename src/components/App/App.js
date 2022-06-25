@@ -5,7 +5,25 @@ import Playlist from "../Playlist/Playlist";
 import seedTracks from "../../data/tracks.json";
 
 function App() {
-	const [searchResults, setSearchResults] = useState(seedTracks);
+	const intitialPlaylist = {
+		playlistName: "My Playlist",
+		playlistTracks: [
+			{
+				name: "test3",
+				artist: "test3",
+				album: "test3",
+				id: 3,
+			},
+			{
+				name: "test4",
+				artist: "test4",
+				album: "test4",
+				id: 4,
+			},
+		],
+	};
+	const [searchResults, setSearchResults] = useState([]);
+	const [playlist, setPlaylist] = useState(intitialPlaylist);
 
 	useEffect(() => {
 		setSearchResults(seedTracks);
@@ -20,7 +38,7 @@ function App() {
 				<SearchBar />
 				<div className="App-playlist">
 					<SearchResults searchResults={searchResults} />
-					<Playlist />
+					<Playlist playlist={playlist} />
 				</div>
 			</div>
 		</div>
