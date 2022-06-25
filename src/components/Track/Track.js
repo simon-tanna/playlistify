@@ -1,8 +1,8 @@
 import React from "react";
 
-const renderAction = () => {
-	isRemoval ? <button>+</button> : <button>-</button>;
-};
+// const renderAction = () => {
+// 	isRemoval ? <button>-</button> : <button>+</button>;
+// };
 
 function Track() {
 	return (

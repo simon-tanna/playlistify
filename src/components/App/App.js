@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
+import seedTracks from "../../data/tracks.json";
 
 function App() {
+	const [searchResults, setSearchResults] = useState(seedTracks);
+
+	useEffect(() => {
+		setSearchResults(seedTracks);
+	}, []);
+
 	return (
 		<div>
 			<h1>
-				Ja<span className="highlight">mmm</span>ing
+				Pl<span className="highlight">laylis</span>tify
 			</h1>
 			<div className="App">
-				{/* <!-- Add a SearchBar component --> */}
+				<SearchBar />
 				<div className="App-playlist">
-					{/* <!-- Add a SearchResults component -->
-      <!-- Add a Playlist component --> */}
+					<SearchResults searchResults={searchResults} />
+					<Playlist />
 				</div>
 			</div>
 		</div>

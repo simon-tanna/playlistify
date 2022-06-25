@@ -1,13 +1,10 @@
 import React from "react";
-import Track from "../Track/Track";
+// import Track from "../Track/Track";
 
-function TrackList() {
+function TrackList({track}) {
 	return (
 		<div class="TrackList">
-			{/* <!-- You will add a map method that renders a set of Track components  --> */}
-			<p>Track 1</p>
-			<p>Track 2</p>
-			<p>Track 3</p>
+			<p>{`Track Name: ${track.name}`}</p>
 		</div>
 	);
 }
