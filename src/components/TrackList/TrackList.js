@@ -5,6 +5,8 @@ function TrackList({track}) {
 	return (
 		<div class="TrackList">
 			<p>{`Track Name: ${track.name}`}</p>
+			<p>{`Artist: ${track.artist}`}</p>
+			<p>{`Album: ${track.album}`}</p>
 		</div>
 	);
 }

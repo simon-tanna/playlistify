@@ -14,7 +14,7 @@ function App() {
 	return (
 		<div>
 			<h1>
-				Pl<span className="highlight">laylis</span>tify
+				Pl<span className="highlight">aylis</span>tify
 			</h1>
 			<div className="App">
 				<SearchBar />
